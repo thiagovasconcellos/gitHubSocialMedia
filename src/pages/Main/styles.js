@@ -1,31 +1,11 @@
-import styled, {keyframes, css} from 'styled-components';
-
-export const Container = styled.div`
-  max-width: 700px;
-  background: #FFF;
-  border-radius: 4px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
-  padding: 30px;
-  margin: 80px auto;
-
-  h1 {
-    font-size: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    svg {
-      margin-right: 10px;
-    }
-  }
-`;
+import styled, { keyframes, css } from 'styled-components';
 
 export const Form = styled.form`
   margin-top: 30px;
   display: flex;
   flex-direction: row;
 
-  input{
+  input {
     flex: 1;
     border: 1px solid #eee;
     padding: 10px 15px;
@@ -59,15 +39,16 @@ export const SubmitButton = styled.button.attrs(props => ({
 
   &[disabled] {
     cursor: not-allowed;
-    opacity: 0.6
+    opacity: 0.6;
   }
 
   ${props =>
-  props.loading && css`
-  svg {
-    animation: ${rotate} 2s linear infinite;
-  }
-  `}
+    props.loading &&
+    css`
+      svg {
+        animation: ${rotate} 2s linear infinite;
+      }
+    `}
 `;
 
 export const List = styled.ul`
@@ -82,7 +63,7 @@ export const List = styled.ul`
     align-items: center;
 
     & + li {
-      border-top: 1px solid #eee
+      border-top: 1px solid #eee;
     }
 
     a {
